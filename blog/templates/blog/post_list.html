@@ -1,0 +1,40 @@
+<h1 style="color:#ff3300;background:cyan"><strong><center>Hello Django </strong></h1>
+{{posts}}
+<br><br>
+{% for post in posts %}
+{{post}}
+{% endfor %}
+
+
+
+
+
+
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+
+
+
+
+<div>
+  <h1 style="color:#ff3300"><center><strong>Dilips block</stong></h1>
+</div>
+
+{% for post in posts %}
+<div>
+  <h2>Author:{{ post.author }}</h2>
+  <h3><a href="#">{{ post.title }}</a> </h3>
+  <h3>created date:{{ post.created_date}}</h3>
+  <h3>published date:{{ post.published_date}}</h3>
+</div>
+{% endfor %}
